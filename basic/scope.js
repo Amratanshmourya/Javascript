@@ -9,11 +9,11 @@ var c=3;     //global scope
 
 function one(){
     const username="Amratansh";
-    function two(){}
+    function two(){
         // const id=211;     //local variable can't access outside two() function
         console.log(username);
     }
     two();
-    console.log(id);
+    // console.log(id);
 }
 one();
