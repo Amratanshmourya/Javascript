@@ -8,6 +8,11 @@ function welcomemsg(username="Sam"){
 }
 // console.log(welcomemsg());
 
+function inmulnumber(...num1)  //... work as rest operator works as taking multiple input and take as an array;
+{
+    console.log(num1);
+}
+inmulnumber(1,2,3,4,5,6,7)
 
 let obj={
     username:"Amratansh",
