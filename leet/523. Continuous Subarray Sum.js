@@ -28,16 +28,28 @@
  
 
 var checkSubarraySum = function(nums, k) {
-    
+    if(nums.length==1)
+        {
+            return false;
+        }
+    let count;
     let sum=0
     for(let i = 0; i<nums.length ; i++)
-    {
+    {   
         sum=0;
+        count=1;
         for(let j = i; j<nums.length ; j++)
         {
-            sum=sum+nums[j];
             
-            if(sum%k==0){
+            sum=sum+nums[j];
+            if(count==1){
+                count=count+1;
+                continue;
+            }
+            
+            console.log(sum);
+            // console.log(count);
+            if(sum%k==0 && sum>0){
                 return true;
             }
         }
@@ -46,6 +58,6 @@ var checkSubarraySum = function(nums, k) {
     }
     return false;
 };
-let arr = [23,2,6,4,7]
-let re=checkSubarraySum(arr,13);
+let arr = [23,2,4,6,7]
+let re=checkSubarraySum(arr,6);
 console.log(re);
