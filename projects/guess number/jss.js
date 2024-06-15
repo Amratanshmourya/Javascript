@@ -21,3 +21,15 @@ if(playgame)
             
         })
     }
+    function validateGuess (guess) {
+    
+    }
+    function checkGuess(guess) {
+    //
+    }
+    function displayGuess (guess) {
+    //
+    }
+    function displayMessage (message) {
+    //
+    }    
