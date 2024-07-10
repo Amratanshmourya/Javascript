@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Events</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xrRuDZTu8VcgoeH-FtQDMJm9LyyKXXIS4A8Gsm-tWXU3mkI8AYvGb4LsDqZue0qE7Ik&usqp=CAU"
+                    id="bird" alt="Bird">
+            </li>
+            <li>
+                <img width="200px" src="https://d2pn8kiwq2w21t.cloudfront.net/images/PIA25326_-_MSR_FAMILY_20220725_1200pm_WITH_E.height-1024.jpg"
+                id="Space" alt="space" >
+            </li>
+            <li>
+                <img width="200px" src="https://www.photographyblog.com/uploads/entryImages/_1280xAUTO_crop_center-center_none/nikon_z8_review.jpg"
+                id="Camera" alt="cam" >
+            </li>
+            <li>
+                <img width="200px" src="https://mirrorlesscomparison.com/wp-content/uploads/2023/10/Nikon-Z8-image-sample-14.jpg"
+                id="Ground" alt="ground" >
+
+            </li>
+            <li>
+                <img width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRWL9L-rE5vDmqXd5cMmwGSwPw0xBuJuXhcE-VyD-Gph84I6pBPQQvbtv23wazissneDI&usqp=CAU"
+                id="river" alt="river" >
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+document.querySelector("#images").addEventListener("click",function(e) {
+     e.preventDefault();
+     let name=e.target.tagName;
+     console.log(name)
+     if(name=="IMG"){
+     let removeit=e.target.parentNode;
+     removeit.remove();
+     }
+},false)
+
+
+</script>
+</html>
