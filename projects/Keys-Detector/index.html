@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="Table">
+    Press Any Key
+   </div>
+</body>
+<script>
+   insert=document.getElementById("Table")
+   Window.addEventListener("keydown", (e) =>
+    {
+        insert.innerHTML=`
+        <div>
+        <table>
+        <tr>
+            <th>Keys</th>
+            <th>Keys Code</th>
+        </tr>
+       <tr>
+        <td>{e.key}</td>
+        </tr>z
+    </table>
+    </div> `
+    })
+</script>
+</html>
