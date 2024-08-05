@@ -39,9 +39,10 @@ function feeddata(data){
     <p><strong>Country:</strong> ${data.location.country}</p>
     <p><strong>Local Time:</strong> ${data.location.localtime}</p>
     <h2>Current Conditions</h2>
+    <img src='https://${data.current.condition.icon}'></img>
     <p><strong>Temperature:</strong> ${data.current.temp_c} °C / ${data.current.temp_f} °F</p>
     <p><strong>Condition:</strong> ${data.current.condition.text}</p>
-    <p><strong>Wind:</strong> ${data.current.wind_kph} kph (${data.current.wind_mph} mph</p>
+    <p><strong>Wind:</strong> ${data.current.wind_kph} kph (${data.current.wind_mph} mph)</p>
     <p><strong>Humidity:</strong> ${data.current.humidity}%</p>
     <p><strong>Pressure:</strong> ${data.current.pressure_mb} mb</p>
     <p><strong>Precipitation:</strong> ${data.current.precip_mm} mm</p>
