@@ -10,6 +10,7 @@
     <div class="calculator">
         <div class="display" id="display"></div>
         <div class="buttons">
+           
             <button class="btn" onclick="clearDisplay()">C</button>
             <button class="btn" onclick="appendToDisplay('/')">/</button>
             <button class="btn" onclick="appendToDisplay('*')">*</button>
@@ -29,12 +30,93 @@
             <button class="btn" onclick="appendToDisplay('0')" id="zero">0</button>
         </div>
     </div>
-    <script src="script.js">
-        const display=document.querySelector(".display");
+    <script>
+        const display=document.getElementById("display")
+        let result=0;
+        let value=0;
+        let operand=0;
         function appendToDisplay(n){
-            Console.log(n)
-    display.innerHtml=n
+            
+            console.log(n)
+            if(n=="+"){
+                if(result==0){
+                    result=value;
+                    value=0;
+                }
+                else{
+                result+=value;
+                value=0;
+            }
+            operand=1;
+            }
+            else if(n=="-"){
+                if(result==0){
+                    result=value;
+                    value=0;
+                }
+                else{
+                result-=value;
+                value=0;
+            }
+            operand=2;
+            }
+            else if(n=="*"){
+                if(result==0){
+                    result=value;
+                    value=0;
+                }
+                else{
+                result*=value;
+                value=0;
+            }
+            operand=3;
+            }
+            else if(n=="/"){
+                if(result==0){
+                    result=value;
+                    value=0;
+                }
+                else{
+                result/=value;
+                value=0;
+            }
+            operand=4;
+            }
+            else{
+                num=parseInt(n);
+                value*=10;
+                value+=num;
+                // display.innerHTML=value;
+            }
+            display.innerHTML+=n;
 }
+        function clearDisplay(){
+            display.innerHTML="";
+            result=0;
+            value=0;
+        }
+        function calculate(){
+            console.log(operand)
+            switch(operand){
+                case 1:
+                    result+=value;
+                    break;
+                case 2:
+                    result-=value;
+                    break;
+                case 3:
+                    result*=value;
+                    break;
+                case 4:
+                    result/=value;
+                    break;
+                default:
+                    console.log("in break")
+                    break;
+            }
+            display.innerHTML=result;
+            value=0;
+        }
     </script>
 </body>
 </html>
