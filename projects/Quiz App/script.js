@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restart = document.getElementById('restart');
     let correctAnswers = [];
     let numQuestions = 0;
+    const TotalQuestions=5;
 
     fetch('https://opentdb.com/api_category.php')
         .then(response => response.json())
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedDifficulty = document.getElementById('Level').value;
         const selectedCategory = categoryDropdown.value;
 
-        fetch(`https://opentdb.com/api.php?amount=5&category=${selectedCategory}&difficulty=${selectedDifficulty}&type=multiple`)
+        fetch(`https://opentdb.com/api.php?amount=${TotalQuestions}&category=${selectedCategory}&difficulty=${selectedDifficulty}&type=multiple`)
             .then(response => response.json())
             .then(data => {
                 selectionContainer.style.display = 'none';
