@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Container Styles */
+#selection-container,
+#quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Quiz Styles */
+#quiz-container {
+    display: none;
+}
+
+h3 {
+    margin: 20px 0 10px;
+}
+
+.answer-container {
+    margin-bottom: 20px;
+}
+
+.answer-container div {
+    margin: 5px 0;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label[for^="question"] {
+    cursor: pointer;
+}
+
+.correct {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Disable the cursor for disabled radio buttons */
+input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Add some styles for better visualization */
+.answer-container {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+
+/* Results container */
+.results-container {
+    position: fixed; /* Fixes the container to the top of the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 20px auto;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    display: none; /* Hidden by default, shown after quiz submission */
+}
+
+/* Heading for the results */
+.results-container h2 {
+    text-align: center;
+    color: #333;
+    margin: 0; /* Remove margin to fit it well at the top */
+}
+
+/* Score text */
+#score {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* Correct answer styling */
+.correct {
+    color: #28a745;
+}
+
+/* Incorrect answer styling */
+.incorrect {
+    color: #dc3545;
+}

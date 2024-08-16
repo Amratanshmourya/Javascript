@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="selection-container">
+        <h2>Choose Your Quiz</h2>
+        <label for="Level">Choose difficulty level</label>
+        <select name="level" id="Level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <label for="categoryDropdown">Select a category:</label>
+        <select id="categoryDropdown"></select>
+
+        <button id="submit">Submit</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <form id="quizForm">
+            <div id="question-container">
+                <!-- Questions and answers will be dynamically inserted here -->
+            </div>
+            <button type="submit" id="sbt">Submit Answers</button>
+           
+        </form>
+       
+         <button id="restart">Restart Quiz</button>
+    </div>
+    <div id="results" class="results-container">
+        <h2>Quiz Results</h2>
+        <div id="score">
+            <!-- Score will be inserted here dynamically -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
