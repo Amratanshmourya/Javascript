@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        div{
+            display: flex;
+            align-content: center;
+   
+        }
+        input{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="data" placeholder="Enter Text" type="text" >
+        <button id="submit" onclick="notification()">Submit</button>
+    </div>
+</body>
+<script>
+    const data=document.getElementById("data");
+    function notification(){
+        Notification.requestPermission().then(function(result){
+                if(result==="granted"){
+                    popNotify();
+                }
+                else{
+                    alert("Permission Denied");
+                }
+        })
+    }
+
+    function popNotify(){
+        const notify = new Notification('Notification', {
+            body:data.value || 'This is a Default Notification'
+        });
+
+        notification.onclick= function(){
+            alert("Notification clicked!!");
+        }
+    }
+
+</script>
+</html>
